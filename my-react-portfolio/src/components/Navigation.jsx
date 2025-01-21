@@ -1,17 +1,50 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Navigation() {
   return (
     <nav>
-      <ul>
-        <li><Link to="/aboutme">About Me</Link></li>
-        <li><Link to="/portfolio">Portfolio</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-        <li><Link to="/resume">Resume</Link></li>
+      <ul className="no-bullets">
+        <li>
+          <NavLink
+            to="/aboutme"
+            activeClassName="active"
+            aria-current={({ isActive }) => (isActive ? 'page' : undefined)}
+          >
+            About Me
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/portfolio"
+            activeClassName="active"
+            aria-current={({ isActive }) => (isActive ? 'page' : undefined)}
+          >
+            Portfolio
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/contact"
+            activeClassName="active"
+            aria-current={({ isActive }) => (isActive ? 'page' : undefined)}
+          >
+            Contact
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/resume"
+            activeClassName="active"
+            aria-current={({ isActive }) => (isActive ? 'page' : undefined)}
+          >
+            Resume
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );
 }
 
 export default Navigation;
+
